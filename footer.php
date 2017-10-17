@@ -90,6 +90,7 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script src="js/classie.js"></script>
 	<script>
     var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
@@ -116,6 +117,26 @@
 	  contain: true
 	});
 	</script>
-	</body>
+<script>
+function init() {
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            shrinkOn = 300,
+            header = document.querySelector("header");
+        if (distanceY > shrinkOn) {
+            classie.add(header,"smaller");
+ 
+
+        } else {
+            if (classie.has(header,"smaller")) {
+                classie.remove(header,"smaller");
+           
+            }
+        }
+    });
+}
+window.onload = init();
+</script>
+</body>
 </html>
 

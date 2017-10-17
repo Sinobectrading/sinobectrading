@@ -72,8 +72,8 @@
 
 	<script src="https://use.fontawesome.com/51d3c24826.js"></script>
 
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+	<script src="js/flickity.pkgd.min.js"></script>
+	<link rel="stylesheet" href="css/flickity.css">
 
 
 	
@@ -83,12 +83,21 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
+
+
+
+<header>
 	<nav class="fh5co-nav" role="navigation">
 		<div class="top">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 text-right">
-						<p class="site">www.sinobectrading.com</p>
+					<div class="col-xs-12" id="putright">
+						<p class="sample seven">
+						<input type="text" name="search" placeholder="search">
+							  <button type="submit" class="btn-search">
+							    <i class="fa fa-search"></i>
+							  </button>
+						</p>
 						<p class="num">Call: +1 (514) 339 9333</p>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-facebook2"></i></a></li>
@@ -108,12 +117,25 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.php">Home</a></li>
-							<li><a href="about.php">About</a></li>
+							<li 
+							<?php if (trim($_SERVER['PHP_SELF']) == "/sinobectrading/index.php") {
+							echo 'class="active"';} ?> 
+							><a href="index.php">Home</a></li>
+							<li
+							<?php if (trim($_SERVER['PHP_SELF']) == "/sinobectrading/about.php") {
+							echo 'class="active"';} ?> 
+							><a href="about.php">About</a></li>
 							<!-- <li><a href="Product.php">Products</a></li> -->
-							<li><a href="service.php">Service</a></li>
-							<li class="has-dropdown">
-								<a href="blog.php">Products&nbsp;<i class="icon-plus"></i></a>
+														<li
+							<?php if (trim($_SERVER['PHP_SELF']) == "/sinobectrading/product.php") {
+							echo 'class="active"';} ?> 
+							><a href="product.php">Products</a></li>
+							<li
+							<?php if (trim($_SERVER['PHP_SELF']) == "/sinobectrading/service.php") {
+							echo 'class="active"';} ?> 
+							><a href="service.php">Service</a></li>
+							<!-- <li class="has-dropdown">
+								<a href="#">Products&nbsp;<i class="icon-plus"></i></a>
 								<ul class="dropdown">
 									<li><a href="aluminum.php">Aluminum</a></li>
 									<li><a href="steel.php">Steel</a></li>
@@ -122,9 +144,15 @@
 									<li><a href="glass.php">Glass</a></li>
 									<li><a href="surface.php">Surface finish</a></li>
 								</ul>
-							</li>
-							<li><a href="news.php">News</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							</li> -->
+							<li
+							<?php if (trim($_SERVER['PHP_SELF']) == "/sinobectrading/news.php") {
+							echo 'class="active"';} ?> 
+							><a href="news.php">News</a></li>
+							<li
+							<?php if (trim($_SERVER['PHP_SELF']) == "/sinobectrading/contact.php") {
+							echo 'class="active"';} ?> 
+							><a href="contact.php">Contact</a></li>
 							<!-- <li class="btn-cta"><a href="#"><span>Tracking</span></a></li> -->
 							<!-- <li class="btn-cta"><a href="#"><span>Create a Course</span></a></li> -->
 						</ul>
@@ -134,3 +162,4 @@
 			</div>
 		</div>
 	</nav>
+</header>
