@@ -58,7 +58,7 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 
 	<!-- Pricing -->
-	<link rel="stylesheet" href="css/pricing.css">
+	<!-- <link rel="stylesheet" href="css/pricing.css"> -->
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
@@ -91,20 +91,42 @@
 		<div class="top">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12" id="putright">
-						<p class="sample seven">
-						<input type="text" name="search" placeholder="search">
-							  <button type="submit" class="btn-search">
-							    <i class="fa fa-search"></i>
-							  </button>
-						</p>
-						<p class="num">Call: +1 (514) 339 9333</p>
-						<ul class="fh5co-social">
-							<li><a href="#"><i class="icon-facebook2"></i></a></li>
-							<li><a href="#"><i class="icon-twitter2"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
-							<li><a href="#"><i class="icon-github"></i></a></li>
-						</ul>
+					<div class="col-xs-12">
+						<div id="searchbox" class="col-md-6 clearfix">
+							<script>
+								(function() {
+								var cx = '005158123518513953887:apxmeeflxxc';
+								var gcse = document.createElement('script');
+								gcse.type = 'text/javascript';
+								gcse.async = true;
+								gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+								    '//www.google.com/cse/cse.js?cx=' + cx;
+								var s = document.getElementsByTagName('script')[0];
+								s.parentNode.insertBefore(gcse, s);
+								})();
+
+
+								$( window ).on( "load", function() {
+								$('#gsc-i-id1').removeAttr('placeholder');
+								$('#gsc-i-id1').css('background', 'none');
+								$("#gsc-i-id1").blur(function() {
+								$('#gsc-i-id1').css('background', 'none');
+								});
+								});
+								</script>
+								<gcse:search enableAutoComplete="true"></gcse:search>
+						</div>
+						<!--  -->
+						<div id="media" class="col-md-6">
+							<ul class="fh5co-social">
+								<li><a href="#"><i class="icon-facebook2"></i></a></li>
+								<li><a href="#"><i class="icon-twitter2"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+								<li><a href="#"><i class="icon-github"></i></a></li>
+							</ul>
+							<p class="num">Call: +1 (514) 339 9333</p>
+							
+						</div>
 					</div>
 				</div>
 			</div>

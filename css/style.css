@@ -45,6 +45,46 @@ body {
 }
 
 
+/*google search box start*/
+
+#media p, #media ul {
+  float: right ! important;
+} 
+
+
+.cse .gsc-control-cse, .gsc-control-cse {
+  padding: 0px ! important;
+padding-top: 5px ! important;
+}
+.gsc-search-button
+{
+    background-color: #ccc;
+    border-radius: 1px;
+}
+ input.gsc-search-button-v2 {
+  padding: 3px 12px! important;
+ }
+ .gsc-search-box-tools .gsc-search-box .gsc-input {
+  padding-right: 0px ! important;
+ }
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus,
+.gsc-search-button {
+    box-sizing: content-box; 
+    line-height: normal;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    background-color: #ccc !important;
+    background-image: url("http://www.google.com/uds/css/v2/search_box_icon.png") !important;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 14px !important;
+    border-color: #ccc !important;
+    filter: none;
+}
+
 
 .none {
     display: none;
@@ -99,18 +139,7 @@ text-align: right !important
 #putright .sample {
     text-align: left;
 }
-input {
-  border: 1px solid #ccc;
-  font-size: 12px;
-  height: 30px;
-  padding: 4px 8px;
-  position: absolute;
-  width: 50%;
-}
-input:focus {
-  outline: none;
-}
-
+ 
 button {
   text-align: center;
 }
@@ -789,7 +818,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   background-color: #ff8040;
-    visibility: visible;
+  visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
